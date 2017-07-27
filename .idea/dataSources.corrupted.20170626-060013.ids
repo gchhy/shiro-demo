@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - demo@localhost" uuid="d2aeeb6c-40fe-4be1-b83e-06dcccfde39c">
+    <database-info product="MySQL" version="5.6.29" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="demo">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="gogs"/>
+      <schema id="3" name="information_schema"/>
+      <schema id="4" name="my"/>
+      <schema id="5" name="mysql"/>
+      <schema id="6" name="performance_schema"/>
+      <schema id="7" name="shiro"/>
+      <schema id="8" name="test"/>
+      <schema id="9" name="yyl"/>
+      <table id="10" parent="1" name="u_permission"/>
+      <table id="11" parent="1" name="u_role"/>
+      <table id="12" parent="1" name="u_role_permission"/>
+      <table id="13" parent="1" name="u_user"/>
+      <table id="14" parent="1" name="u_user_role"/>
+      <column id="15" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="16" parent="10" name="url">
+        <comment>url地址</comment>
+        <data-type>varchar(256)|0</data-type>
+      </column>
+      <column id="17" parent="10" name="name">
+        <comment>url描述</comment>
+        <data-type>varchar(64)|0</data-type>
+      </column>
+      <key id="18" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="19" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="20" parent="11" name="name">
+        <comment>角色名称</comment>
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <column id="21" parent="11" name="type">
+        <comment>角色类型</comment>
+        <data-type>varchar(10)|0</data-type>
+      </column>
+      <key id="22" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="23" parent="12" name="rid">
+        <comment>角色ID</comment>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="24" parent="12" name="pid">
+        <comment>权限ID</comment>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="25" parent="13" name="id">
+        <mandatory>1</mandatory>
+        <data-type>bigint(20)|0</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="26" parent="13" name="nickname">
+        <comment>用户昵称</comment>
+        <data-type>varchar(20)|0</data-type>
+      </column>
+      <column id="27" parent="13" name="email">
+        <comment>邮箱|登录帐号</comment>
+        <data-type>varchar(128)|0</data-type>
+      </column>
+      <column id="28" parent="13" name="pswd">
+        <comment>密码</comment>
+        <data-type>varchar(32)|0</data-type>
+      </column>
+      <column id="29" parent="13" name="create_time">
+        <comment>创建时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="30" parent="13" name="last_login_time">
+        <comment>最后登录时间</comment>
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="31" parent="13" name="status">
+        <comment>1:有效，0:禁止登录</comment>
+        <data-type>bigint(1)|0</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <key id="32" parent="13" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="33" parent="14" name="uid">
+        <comment>用户ID</comment>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+      <column id="34" parent="14" name="rid">
+        <comment>角色ID</comment>
+        <data-type>bigint(20)|0</data-type>
+      </column>
+    </database-model>
+  </data-source>
+</component>
